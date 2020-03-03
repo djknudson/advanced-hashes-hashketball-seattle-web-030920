@@ -252,7 +252,7 @@ end
 def team_most_points_scored()
 	brooklyn_score = 0
 	charlotte_score = 0
-	
+
 	game_hash.each do |place, team|
 		team.each do |attributes, data|
 			if attributes == :players
@@ -264,12 +264,12 @@ def team_most_points_scored()
 						brooklyn_score += num_points_scored(player[:player_name])
 					end
 				end
-			end  
-		end  
+			end
+		end
 	end
 	if brooklyn_score > charlotte_score
 		return "Brooklyn Nets"
 	else
 		return "Charlotte Hornets"
-	end		
+	end
 end
