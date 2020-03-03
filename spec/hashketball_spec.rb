@@ -287,3 +287,44 @@ describe 'super bonus' do
   end
 
 end
+
+def most_steals()
+	most_stolen = 0
+	stealer_name = ""	
+	
+	game_hash.each do |place, team|
+		team.each do |attributes, data|
+			if attributes == :players
+		data.each do |player|
+			if player[:steals] > most_stolen
+				most_stolen = player[:steals]
+				stealer_name = player[:player_name]
+			end
+		end
+			end  
+		end  
+	end
+	stealer_name
+end
+
+def longest_name_steals
+	game_hash.each do |place, team|
+		team.each do |attributes, data|
+			if attributes == :players
+				data.each do |player|
+					if player[:player_name] == player_with_longest_name()
+						return player[:steals]
+					end
+				end
+			end
+		end
+	end
+end
+
+def long_name_steals_a_ton?
+	if player_with_longest_name() == most_steals()
+		return true
+	else
+		return false
+	end		
+end
