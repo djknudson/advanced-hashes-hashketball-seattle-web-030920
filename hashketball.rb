@@ -217,7 +217,7 @@ end
 
 def big_shoe_rebounds()
   big_shoe_input = biggest_shoe()
-  
+
   game_hash.each do |place, team|
 		team.each do |attribute, data|
 			if attribute == :players
@@ -233,7 +233,7 @@ end
 
 def most_points_scored()
 	big_score = 0
-	big_scorer = ""	
+	big_scorer = ""
 	game_hash.each do |place, team|
 		team.each do |attributes, data|
 			if attributes == :players
@@ -243,8 +243,8 @@ def most_points_scored()
 				big_scorer = player[:player_name]
 			end
 		end
-			end  
-		end  
+			end
+		end
 	end
 	big_scorer
 end
