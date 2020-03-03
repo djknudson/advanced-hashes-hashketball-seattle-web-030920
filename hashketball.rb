@@ -249,7 +249,7 @@ def most_points_scored()
 	big_scorer
 end
 
-def team_most_points_scored()
+def winning_team()
 	brooklyn_score = 0
 	charlotte_score = 0
 
