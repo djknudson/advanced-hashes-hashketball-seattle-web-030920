@@ -290,8 +290,8 @@ end
 
 def most_steals()
 	most_stolen = 0
-	stealer_name = ""	
-	
+	stealer_name = ""
+
 	game_hash.each do |place, team|
 		team.each do |attributes, data|
 			if attributes == :players
@@ -301,8 +301,8 @@ def most_steals()
 				stealer_name = player[:player_name]
 			end
 		end
-			end  
-		end  
+			end
+		end
 	end
 	stealer_name
 end
@@ -326,5 +326,5 @@ def long_name_steals_a_ton?
 		return true
 	else
 		return false
-	end		
+	end
 end
